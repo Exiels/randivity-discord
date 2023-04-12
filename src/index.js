@@ -1,4 +1,4 @@
-const { Client, GatewayIntentBits } = require('discord.js');
+const { Client, GatewayIntentBits } = require('discord.js')
 const token = process.env.BOT_TOKEN
 
 const commandsHandler = require('./commands/commandsHandler')
@@ -8,7 +8,7 @@ async function startServer () {
   // Create a new client instance
   const client = new Client({ intents: [GatewayIntentBits.Guilds] })
 
-  // Init the commandsHandler 
+  // Init the commandsHandler
   commandsHandler(client)
 
   // Init the eventHandler
