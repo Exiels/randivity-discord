@@ -25,6 +25,7 @@
   "dependencies": {
     "discord.js": "^14.9.0",
     "jest": "^29.5.0",
+    "nodemon": "^2.0.22",
     "standard": "^17.0.0",
     "supertest": "^6.3.3"
   }
