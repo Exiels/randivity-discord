@@ -1,17 +1,20 @@
-// Require the necessary discord.js classes
-const { Client, Events, GatewayIntentBits } = require('discord.js')
+const { Client, GatewayIntentBits } = require('discord.js')
 const token = process.env.BOT_TOKEN
+
+const commandsHandler = require('./commands/commandsHandler')
+const eventHandler = require('./events/eventsHandler')
 
 async function startServer () {
   // Create a new client instance
   const client = new Client({ intents: [GatewayIntentBits.Guilds] })
-  // When the client is ready, run this code (only once)
-  // We use 'c' for the event parameter to keep it separate from the already defined 'client'
-  client.once(Events.ClientReady, c => {
-    console.log(`Ready! Logged in as ${c.user.tag}`)
-  })
 
-  // Log in to Discord with your client's token
+  // Init the commandsHandler
+  commandsHandler(client)
+
+  // Init the eventHandler
+  eventHandler(client)
+
+  // Log in to Discord with the bot token
   client.login(token)
 }
 
