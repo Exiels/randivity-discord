@@ -1,0 +1,31 @@
+{
+  "name": "randivity-discord",
+  "version": "1.0.0",
+  "description": "Randivity-Discord is the discord bot for the randivity project",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --runInBand --testTimeout=15000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Randivity/randivity-discord.git"
+  },
+  "keywords": [
+    "randivity",
+    "nodejs",
+    "discord",
+    "bot"
+  ],
+  "author": "Exiels",
+  "license": "SEE LICENSE IN ../LICENCE",
+  "bugs": {
+    "url": "https://github.com/Randivity/randivity-discord/issues"
+  },
+  "homepage": "https://github.com/Randivity/randivity-discord#readme",
+  "dependencies": {
+    "discord.js": "^14.9.0",
+    "jest": "^29.5.0",
+    "standard": "^17.0.0",
+    "supertest": "^6.3.3"
+  }
+}
